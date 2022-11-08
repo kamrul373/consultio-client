@@ -2,3 +2,11 @@
     width: 200px;
     height: auto;
 }
+
+.menu-area li {
+    margin-right: 10px !important;
+}
+
+.menu-area li a {
+    font-size: 18px;
+}
