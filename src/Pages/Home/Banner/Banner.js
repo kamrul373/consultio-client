@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import banner from "../../../assets/img/banner-1.jpg"
 const Banner = () => {
     return (
@@ -10,7 +11,9 @@ const Banner = () => {
                         <h3 className='text-xl mb-4 italic'>Effective Immigration Solution</h3>
                         <h1 className="mb-5 text-5xl font-bold">Empowering Peoples Immigration Confidently</h1>
                         <p className="mb-5 text-xl">Get professional guidance from an Expert Immigration Consultant</p>
-                        <button className="btn btn-primary">Get Started</button>
+                        <Link to="/services">
+                            <button className="btn btn-primary btn-wide">Get Started</button>
+                        </Link>
                     </div>
                 </div>
             </div>
