@@ -1,6 +1,6 @@
-import { GoogleAuthProvider } from 'firebase/auth';
+import { GithubAuthProvider, GoogleAuthProvider } from 'firebase/auth';
 import React, { useContext, useState } from 'react';
-import { FaGoogle } from 'react-icons/fa';
+import { FaGithub, FaGithubAlt, FaGoogle } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../../context/AuthContextProvider';
 
@@ -32,6 +32,17 @@ const SignIn = () => {
                 console.log(user);
             }).catch(error => console.log(error))
     }
+    // github 
+    const handleGithubLogin = () => {
+        const githubProvider = new GithubAuthProvider();
+
+        loginwithProvider(githubProvider)
+            .then(response => {
+                const user = response.user;
+                console.log(user);
+            }).catch(error => console.log(error))
+    }
+
     return (
         <div>
             <div className="bg-base-200 py-8">
@@ -73,7 +84,10 @@ const SignIn = () => {
                         <div className='text-center'>
                             <p className='font-bold mb-4'>Or Sign In with </p>
                             <button onClick={handlGoogleLogin} type='button' className='mb-4'>
-                                <FaGoogle className='text-3xl text-[#4285F4]'></FaGoogle>
+                                <FaGoogle className='text-3xl mr-2'></FaGoogle>
+                            </button>
+                            <button onClick={handleGithubLogin} type='button' className='mb-4'>
+                                <FaGithub className='text-3xl  ml-2'></FaGithub>
                             </button>
                         </div>
                     </form>
