@@ -1,8 +1,15 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import logo from "../../../assets/img/logo.png";
 import { Link } from 'react-router-dom';
 import "./Header.css";
+import { AuthContext } from '../../../context/AuthContextProvider';
 const Header = () => {
+  const { user, logout } = useContext(AuthContext);
+  const handlLogOut = () => {
+    logout()
+      .then(() => { })
+      .catch(error => console.log(error));
+  }
   return (
     <header className="navbar bg-base-100 py-5 menu-area">
       <div className="navbar-start">
@@ -18,9 +25,22 @@ const Header = () => {
             <li>
               <Link to="/services">Services</Link>
             </li>
-            <li className='btn btn-primary'>
-              <Link to="/signin">Sign In</Link>
-            </li>
+            {
+              !user?.uid ?
+                <>
+                  <li className='btn btn-primary'>
+                    <Link to="/signin">Sign In</Link>
+                  </li>
+                </>
+                : <div className='btn-circle avatar'>
+                  <div className="w-10 rounded-full">
+                    <img src={user?.photoURL} alt={user?.displayName} className="rounded" />
+                  </div>
+                </div>
+            }
+            {
+              user?.uid && <button onClick={handlLogOut} className='btn btn-primary'>Logout</button>
+            }
           </ul>
         </div>
         <Link to="/" className="btn btn-ghost normal-case text-xl">
@@ -37,9 +57,22 @@ const Header = () => {
           <li>
             <Link to="/services">Services</Link>
           </li>
-          <li className='btn btn-primary'>
-            <Link to="/signin">Sign In</Link>
-          </li>
+          {
+            !user?.uid ?
+              <>
+                <li className='btn btn-primary'>
+                  <Link to="/signin">Sign In</Link>
+                </li>
+              </>
+              : <div className='btn-circle avatar'>
+                <div className="w-10 rounded-full">
+                  <img src={user?.photoURL} alt={user?.displayName} className="rounded" />
+                </div>
+              </div>
+          }
+          {
+            user?.uid && <button onClick={handlLogOut} className='btn btn-primary'>Logout</button>
+          }
         </ul>
       </div>
     </header>
