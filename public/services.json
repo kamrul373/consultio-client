@@ -1,0 +1,78 @@
+[
+    {
+        "service_name": "STUDENT VISA",
+        "img": "https://i.ibb.co/zQmjbMN/student-visa-consultancy-services-500x500.png",
+        "summary": "For the perception & better career opportunities for the students.Generally intended for individuals entering a country for the purposes of conducting Univeristy Certification",
+        "description": "An in-depth assessment of your profile. A detailed checklist of the documents required and verifies for correctness and authenticity.Online training by language experts to help you succeed in the mandatory IELTS exam.Help with airport pick-up and accommodation services.",
+        "price": "299",
+        "visa_types": [
+            "F1 Visa for Academic Studies",
+            "J1 Visa for Practical Training",
+            "M1 Visa Non-Academic / Vocational Studies"
+        ],
+        "documents": [
+            "Passport size photographs",
+            "Education Credential Assessment",
+            "Medical certificate",
+            "Recent IELTS score",
+            "Police Clearance Certificates",
+            "Passport & travel documents",
+            "Letters of Recommendation",
+            "Authentic proof of funds"
+        ],
+        "age_limit": "18 to 35 years",
+        "ratting": "4.5"
+    },
+    {
+        "service_name": "Residence Visa",
+        "img": "https://i.ibb.co/j8rhTfg/Residence-Permit.jpg",
+        "summary": "A PR visa, or Permanent Resident Visa, allows you to travel to a nation, stay for a period of time, and then seek for citizenship. In some countries, obtaining a PR visa eventually leads to citizenship.",
+        "description": "Consultant talks to the visa seekers and acquires necessary information associated with his/her purpose of visit, travel plans, financing plans, etc. The consultant takes note of everything and suggests the best possible approach to prepare the applications. Clients are informed about the step-by-step process.Your case will assess and Customized Checklist will generate.All the necessary supporting documents such as different official letters, reservations, and forms are prepared and sent to clients for review before finalization. Documents from the client's end such as copies of passports and visas, photographs, Identifications, Financial statements, etc. are acquired from the clients and complied with in order.Clients visit our office prior to their Embassy appointment dates to pick up the compiled document pack. A brief is given to the clients about the possible activities that are to be carried out at the time of submission in a visa office/embassy/visa application center.",
+        "price": "499",
+        "visa_types": [
+            "Permanent Visa",
+            "Humanitarian Residence",
+            "Temporary Visa"
+        ],
+        "documents": [
+            "Passport size photographs",
+            "Provincial Nomination Letter",
+            "Work experience letter",
+            "Education Credential Assessment",
+            "Medical certificate",
+            "Recent IELTS score",
+            "Police Clearance Certificates",
+            "Passport & travel documents",
+            "Letters of Recommendation",
+            "Authentic proof of funds"
+        ],
+        "age_limit": "18 to 45 years",
+        "ratting": "4.3"
+    },
+    {
+        "service_name": "Business Visa",
+        "img": "https://i.ibb.co/j8rhTfg/Residence-Permit.jpg",
+        "summary": "A PR visa, or Permanent Resident Visa, allows you to travel to a nation, stay for a period of time, and then seek for citizenship. In some countries, obtaining a PR visa eventually leads to citizenship.",
+        "description": "Consultant talks to the visa seekers and acquires necessary information associated with his/her purpose of visit, travel plans, financing plans, etc. The consultant takes note of everything and suggests the best possible approach to prepare the applications. Clients are informed about the step-by-step process.Your case will assess and Customized Checklist will generate.All the necessary supporting documents such as different official letters, reservations, and forms are prepared and sent to clients for review before finalization. Documents from the client's end such as copies of passports and visas, photographs, Identifications, Financial statements, etc. are acquired from the clients and complied with in order.Clients visit our office prior to their Embassy appointment dates to pick up the compiled document pack. A brief is given to the clients about the possible activities that are to be carried out at the time of submission in a visa office/embassy/visa application center.",
+        "price": "499",
+        "visa_types": [
+            "Permanent Visa",
+            "Humanitarian Residence",
+            "Temporary Visa"
+        ],
+        "documents": [
+            "Passport size photographs",
+            "Provincial Nomination Letter",
+            "Work experience letter",
+            "Education Credential Assessment",
+            "Medical certificate",
+            "Recent IELTS score",
+            "Police Clearance Certificates",
+            "Passport & travel documents",
+            "Letters of Recommendation",
+            "Authentic proof of funds"
+        ],
+        "age_limit": "18 to 45 years",
+        "ratting": "4.3"
+    }
+]
