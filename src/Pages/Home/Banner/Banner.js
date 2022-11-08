@@ -9,7 +9,7 @@ const Banner = () => {
                     <div className="w-[60%] mx-auto">
                         <h3 className='text-xl mb-4 italic'>Effective Immigration Solution</h3>
                         <h1 className="mb-5 text-5xl font-bold">Empowering Peoples Immigration Confidently</h1>
-                        <p className="mb-5"> We are trusted immigration consultants who can handle your case and Our professional registered agents will assist you with your visa application.</p>
+                        <p className="mb-5 text-xl">Get professional guidance from an Expert Immigration Consultant</p>
                         <button className="btn btn-primary">Get Started</button>
                     </div>
                 </div>

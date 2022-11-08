@@ -1,5 +1,80 @@
 [
     {
+        "service_name": "Skilled Workers Visa Processing",
+        "img": "https://i.ibb.co/VHYRnxF/skilled-workeb3.jpg",
+        "summary": "The skilled people who want to migrate have to apply for Skilled migration visa that is generally based on the skills or education background of the applicant.",
+        "description": "The visa helps to target the skilled people who want to make their career in different countries and like to make contribution in that country's economy. To meet up for the application, the candidates undergoes certain point tests and it is important to qualify for a skilled permanent resident policy.The skilled people are assessed on the basis of AGE, OCCUPATION and language like ENGLISH. The applicant may also apply by giving the proof of their relative who is the native in the country, by issuing their proof ids and status. The skilled applicant also requires medicinal checks before the permanent residential visa is not approved. The skilled applicants have the legacy for permanent resident for specified no. of years and then can be a citizen of that country.",
+        "price": "399",
+        "visa_types": [
+            "Temporary Non-Immigrant Visa",
+            "Permanent (Immigrant) Workers",
+            "Student and Exchange Visitors"
+        ],
+        "documents": [
+            "6 passport size color pictures",
+            "Passport & travel documents",
+            "Provincial Nomination Letter",
+            "Education Credential Assessment",
+            "Medical certificate",
+            "Recent IELTS score",
+            "Police Clearance Certificates",
+            "Authentic proof of funds",
+            "Evidence of employment"
+        ],
+        "age_limit": "18 to 30 years",
+        "ratting": "4.7"
+    },
+    {
+        "service_name": "USA Green Card Consultancy",
+        "img": "https://i.ibb.co/qMCyDs2/USA-Green-Card.jpg",
+        "summary": "The United States Employment Based (Category) 5 Program provides a special category of immigration Visa for High Net worth international investors.",
+        "description": "The USA is the world's foremost economy having global interests and an unmatched global reach. With immense benefits in health, education and business, USA stands as the most sought after destination for every individual. The United States has a capitalist economy. USCIS administers the EB-5 Immigrant Investor Program, created by Congress in 1990 to stimulate the U.S. economy through job creation and capital investment by foreign investors. No Prior business management experience is required.In addition to the above selection criteria, other factors such as age must be 21 years old, no language proficiency is required, no requirement of education, and legal source of funds plays an important role in the process.Expeditious processing: U.S. E-2 visa can generally be obtained within 3 months*",
+        "price": "799",
+        "visa_types": [
+            "E-2 VISA"
+        ],
+        "documents": [
+            "Make a minimum investment of $500,000 (or it’s equivalent in a foreign currency, either individually or combined with their spouse or partner) in a commercial entity located in a targeted employment area (TEA).",
+            "Investment shall result in creation of 10 full-time jobs for US Citizens.",
+            "50% owner of the Class A Units with another E-2 Investor",
+            "Investor Option to make the full investment and own 100% if desired",
+            "Involvement in the decision making process",
+            "6 passport size color pictures",
+            "Passport & travel documents",
+            "Provincial Nomination Letter",
+            "Education Credential Assessment",
+            "Medical certificate",
+            "Recent IELTS score",
+            "Police Clearance Certificates",
+            "Authentic proof of funds",
+            "Evidence of employment"
+        ],
+        "age_limit": "21 to 30 years",
+        "ratting": "4.4"
+    },
+    {
+        "service_name": "Visitor Visa Consultancy",
+        "img": "https://i.ibb.co/NYDYq2x/Visitor-Visa.jpg",
+        "summary": "Be it any occasion, traveling abroad has always been interesting. If you are planning to travel across the world, all you require is a Visitor Visa.",
+        "description": "Many in procedure to get the visa formalities done shall call you to the embassy premises (of the country you want to travel) for an interview. There are possibilities that even after a long process, you may have to convince the visa officer about the reason of your visit to the native country and the authentication of the fact that you will return within the allotted time period.Consultio provides you with easy and comprehensible Visitor visa application process. Where you are not at all pressurized by lunatic Q/A's thrown by visa officer. You are just required to clear the medical examination for your entry in that country. That is done to ensure that you are not suffering from any serious medical problem or any threatening ailment which may endanger their people.",
+        "price": "99",
+        "visa_types": [
+            "B-1 VISA",
+            "B-2 VISA",
+            "Logical Visa",
+            "Documents Support visa"
+        ],
+        "documents": [
+            "2 passport size color pictures",
+            "Passport & travel documents",
+            "Medical certificate",
+            "Police Clearance Certificates",
+            "Authentic proof of funds"
+        ],
+        "age_limit": "18 to any years",
+        "ratting": "4.8"
+    },
+    {
         "service_name": "STUDENT VISA",
         "img": "https://i.ibb.co/zQmjbMN/student-visa-consultancy-services-500x500.png",
         "summary": "For the perception & better career opportunities for the students.Generally intended for individuals entering a country for the purposes of conducting Univeristy Certification",
@@ -36,13 +111,13 @@
         ],
         "documents": [
             "Passport size photographs",
+            "Passport & travel documents",
             "Provincial Nomination Letter",
             "Work experience letter",
             "Education Credential Assessment",
             "Medical certificate",
             "Recent IELTS score",
             "Police Clearance Certificates",
-            "Passport & travel documents",
             "Letters of Recommendation",
             "Authentic proof of funds"
         ],
@@ -50,29 +125,99 @@
         "ratting": "4.3"
     },
     {
-        "service_name": "Business Visa",
-        "img": "https://i.ibb.co/j8rhTfg/Residence-Permit.jpg",
-        "summary": "A PR visa, or Permanent Resident Visa, allows you to travel to a nation, stay for a period of time, and then seek for citizenship. In some countries, obtaining a PR visa eventually leads to citizenship.",
-        "description": "Consultant talks to the visa seekers and acquires necessary information associated with his/her purpose of visit, travel plans, financing plans, etc. The consultant takes note of everything and suggests the best possible approach to prepare the applications. Clients are informed about the step-by-step process.Your case will assess and Customized Checklist will generate.All the necessary supporting documents such as different official letters, reservations, and forms are prepared and sent to clients for review before finalization. Documents from the client's end such as copies of passports and visas, photographs, Identifications, Financial statements, etc. are acquired from the clients and complied with in order.Clients visit our office prior to their Embassy appointment dates to pick up the compiled document pack. A brief is given to the clients about the possible activities that are to be carried out at the time of submission in a visa office/embassy/visa application center.",
-        "price": "499",
+        "service_name": "Business Immigration Visa Consultancy",
+        "img": "https://i.ibb.co/xXhJ7hb/business-visa.jpg",
+        "summary": "The world is evolving into a revolutionizing village and the economies are enormously progressing with the growth in international trade.Generally intended for individuals entering a country for the purposes of conducting business.",
+        "description": "Business visa is for a Business person who wants to visit abroad for the purpose of trade, commerce and investment.A Business visa may be issued for maximum 1 (one) year with single, double or multiple entries. Exclusive Guidance to Create a unique Business Plan to create successful Project.Consultant talks to the visa seekers and acquires necessary information associated with his/her purpose of visit, travel plans, financing plans, etc. The consultant takes note of everything and suggests the best possible approach to prepare the applications. An in-depth assessment of your profile. A detailed checklist of the documents required and verifies for correctness and authenticity.We provide you all the consultancy services in relation to business association; for a scientific, educational, professional or business convention.",
+        "price": "399",
         "visa_types": [
-            "Permanent Visa",
-            "Humanitarian Residence",
-            "Temporary Visa"
+            "Investor Visa",
+            "Entrepreneur Visa",
+            "Self-Employed Persons Visa"
         ],
         "documents": [
-            "Passport size photographs",
+            "Passport & travel documents",
+            "3 color pictures",
             "Provincial Nomination Letter",
-            "Work experience letter",
+            "Evidence of accommodation",
             "Education Credential Assessment",
             "Medical certificate",
             "Recent IELTS score",
             "Police Clearance Certificates",
-            "Passport & travel documents",
             "Letters of Recommendation",
+            "Authentic proof of funds",
+            "Evidence of employment"
+        ],
+        "age_limit": "18 to 50 years",
+        "ratting": "4.1"
+    },
+    {
+        "service_name": "Family Visa Consultancy",
+        "img": "https://i.ibb.co/xJ3HHLF/Family-Visa.jpg",
+        "summary": "Now shifting to other countries with your family isn’t a problem. Consultio give you the privilege of hassle-free family visa services. To reconcile with your family, is a widely recognized immigration option that many of the countries provide. Taking all the circumstances in mind WWICS has configured the family visa immigration service under the umbrella of Family Class Visa services.",
+        "description": "Provide immaculate assistance to client while preparing the case for immigration.Identify and review all the supporting documents required for submission.Submit the complete case with documentation and supporting evidence along with the  submission report to the processing Visa Office.Handle all correspondence with the processing visa office pertaining to client's case and intimate the requirements sent by Processing Visa office during the progress of the immigration case.Provide multi-stage counseling to the clients at various stages like on receipt of the File number, Interview, Medical, Landing Papers and on other immigration related matters, as and when required.Assist the client in keeping the file up to date.Assist client in interview preparation at Visa Processing Post through various counseling sessions, both at the branch level and Head Office level.Monitor the case throughout the processing to ensure timely issuance of visa to the client.Adopt ways to save time and finances by taking pre-emptive measures for possible troubling issues.Family Visa provides the authority to live and migrate from one country to another with all your family members. The presence of one or more family member in a certain country enables rest of the family to immigrate to that country as well. The family reunification provisions at WWICS are made to respect the right of a family to live together. The family visa service takes care of all the laws of immigration.Spousal immigration is another option of family reunification or immigration via marriage, where one spouse immigrates to the country of the other spouse. We help you reunite with your family and loved ones to join your relatives abroad. If your relatives hold a Permanent Residency or Citizenship status, all you need is a sponsorship letter from your relative / blood relative to file the application besides other requirements to be met. Thereby, the sponsorship letter helps in the execution of the family immigration process easily.",
+        "price": "699",
+        "visa_types": [
+            "F2A",
+            "F2B",
+            "F3"
+        ],
+        "documents": [
+            "2 passport size color pictures",
+            "Passport & travel documents",
+            "Medical certificate",
+            "Police Clearance Certificates",
             "Authentic proof of funds"
         ],
-        "age_limit": "18 to 45 years",
-        "ratting": "4.3"
+        "age_limit": "18 to 40 years",
+        "ratting": "4.8"
+    },
+    {
+        "service_name": "Citizenship By Investment Consultancy",
+        "img": "https://i.ibb.co/Dw3Q0w2/Citizenship-by-Investment.png",
+        "summary": "While residence is granted to investors and wealthy individuals in most countries, there are currently only a handful of countries which offer citizenship-by-investment programs that provide a direct route to citizenship based on investment.",
+        "description": "An in-depth assessment of your profile. A detailed checklist of the documents required and verifies for correctness and authenticity.Online training by language experts to help you succeed in the mandatory IELTS exam.Help with airport pick-up and accommodation services.Citizenship by Investment programs offers the applicant and his family the opportunity to legally acquire a new citizenship and passport quickly and simply, without any disruptions to your life. Citizenship by investment may or may not require the applicant to reside in the country prior to naturalisation. Obligatory residence is beneficial for the country because the investor pays taxes, and also helps to improve the state's economy by creating additional jobs, or increasing the consumption of goods. But, WWICS has sifted the best programs for you. Some of the benefits of citizenship, aside from visa-free travel, include access to markets, transportation and business facilities; a civil society with modern services and infrastructure. Citizenship by Investment waives off the normalisation period for people who make an economic contribution to the country, usually by making a donation to their government, or to invest in real estate in the country. These programs are the most fast track programs for obtaining the citizenship, and passport for life.",
+        "price": "399",
+        "visa_types": [
+            "F2A",
+            "F2B",
+            "F3"
+        ],
+        "documents": [
+            "2 passport size color pictures",
+            "Passport & travel documents",
+            "Medical certificate",
+            "Police Clearance Certificates",
+            "Authentic proof of funds"
+        ],
+        "age_limit": "18 to 40 years",
+        "ratting": "4.8"
+    },
+    {
+        "service_name": "Faster Medical Visa",
+        "img": "https://i.ibb.co/0V2fQ3b/group-of-doctors-walking-in-corridor-on-medical-conference.jpg",
+        "summary": "An applicant who wishes to visit any country for medical treatment/s can apply for tourist visa. You will need to prove that the medical treatment you are seeking abroad is not available in your home country or you have to provide strong evidences of approaching that treatment outside based on solid reasons. Why the country you are selecting is better than yours needs also to be answered. You must be ready for all the expenses that are incurred throughout your medical stay abroad.",
+        "description": "Consultio ensures better and faster visa preparation for you to have an ever effective medical trip from abroad.Provide immaculate assistance to client while preparing the case for immigration.Identify and review all the supporting documents required for submission.Submit the complete case with documentation and supporting evidence along with the submission report to the processing Visa Office.Handle all correspondence with the processing visa office pertaining to client's case and intimate the requirements sent by Processing Visa office during the progress with priority.",
+        "price": "399",
+        "visa_types": [
+            "F2A",
+            "F2B",
+            "F3"
+        ],
+        "documents": [
+            "A passport with 6 months validity on the date of application and it should have at least 2 empty pages",
+            "Passport biodata page photocopies (3 copy)",
+            "3 copies biometric photos with white background that were taken within the last 6 months covering the full-face including ears and all hair, clearly and completely visible without shadow, in size 2x2 matte paper",
+            "Travel insurance",
+            "Airline ticket reservation",
+            "Hotel reservation",
+            "Original bank statement up to date covering last 3 months of transactions + Original Bank solvency (of the cost bearer)",
+            "Patient acceptance letter from one of the hospitals",
+            "Medical treatment invitation letter",
+            "NOC",
+            "Police Clearance Certificates"
+        ],
+        "age_limit": "18 to 65 years",
+        "ratting": "4.6"
     }
 ]

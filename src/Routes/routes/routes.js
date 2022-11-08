@@ -10,10 +10,12 @@ export const router = createBrowserRouter([
         children: [
             {
                 path: "/",
+                loader: async () => fetch("http://localhost:5000/services/limited"),
                 element: <Home></Home>
             },
             {
                 path: "/home",
+                loader: async () => fetch("http://localhost:5000/services/limited"),
                 element: <Home></Home>
             }
         ]
