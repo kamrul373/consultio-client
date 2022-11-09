@@ -1,12 +1,18 @@
 import React, { useContext, useEffect, useState } from 'react';
+import { toast } from 'react-hot-toast';
 import ReactStars from 'react-rating-stars-component';
 import { AuthContext } from '../../../context/AuthContextProvider';
 
-const ReviewForm = () => {
+const ReviewForm = ({ serviceId }) => {
+    // context
     const { user } = useContext(AuthContext);
+    // rating state
+    const [serviceRating, setServiceRating] = useState(0)
+    // states for user email and name if auth have those 
+    // so we can disalbe those field 
     const [toggleEmail, setEmailToggle] = useState(true)
     const [toggleName, setNameToggle] = useState(true);
-    const [serviceRating, setServiceRating] = useState(0)
+    // sideeffect to maintain disable state of fields
     useEffect(() => {
         if (!user?.displayName) {
             setNameToggle(false)
@@ -15,9 +21,11 @@ const ReviewForm = () => {
             setEmailToggle(false);
         }
     }, [user]);
+    // rating event handler
     const handleRating = (value) => {
         setServiceRating(value);
     }
+    // form submit event handler
     const handleCustomerReview = (e) => {
         e.preventDefault();
         const form = e.target;
@@ -25,8 +33,28 @@ const ReviewForm = () => {
         const email = user.email ? user.email : form.email.value;
         const customerRating = serviceRating;
         const customerReview = form.reviewText.value;
+        const uid = user?.uid;
 
-        console.log(name, email, customerRating, customerReview);
+        const reviewData = {
+            name, email, customerRating, customerReview, uid, serviceId
+        }
+
+        fetch("http://localhost:5000/reviewpost", {
+            method: "POST",
+            headers: {
+                "content-type": "application/json"
+            },
+            body: JSON.stringify(reviewData)
+        })
+            .then(response => response.json())
+            .then(data => {
+                console.log(data)
+                toast.success("Review Published!");
+                form.reset();
+            })
+            .catch(error => console.log(error));
+
+        console.log(name, email, customerRating, customerReview, uid, serviceId);
     }
     return (
         <div className='py-8'>

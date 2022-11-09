@@ -18,8 +18,8 @@ const ServiceDetails = () => {
             <Reviews></Reviews>
             {
                 user?.uid || user?.email ?
-                    <ReviewForm></ReviewForm>
-                    : <h2 className='text-2xl font-semibold'>Please <Link className='text-primary'>Login</Link>  to add a review. </h2>
+                    <ReviewForm serviceId={serviceDetails._id}></ReviewForm>
+                    : <h2 className='text-2xl font-semibold'>Please <Link to="/signin" className='text-primary'>Login</Link>  to add a review. </h2>
             }
 
         </div>
