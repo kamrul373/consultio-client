@@ -2,7 +2,8 @@ import React from 'react';
 import { FaStar } from 'react-icons/fa';
 import pageTitle from '../../../utility/pageTitle';
 import title_bg from "../../../assets/img/service_title_bg.jpg";
-
+import { PhotoProvider, PhotoView } from 'react-photo-view';
+import 'react-photo-view/dist/react-photo-view.css';
 
 const Content = ({ serviceDetails }) => {
     const { service_name, price, img, summary, description, visa_types, documents, age_limit, ratting } = serviceDetails;
@@ -20,7 +21,12 @@ const Content = ({ serviceDetails }) => {
             </div>
             <div className='mt-6 flex justify-center'>
                 <div className='col-span-2' >
-                    <img src={img} alt={service_name} />
+                    <PhotoProvider>
+                        <PhotoView src={img}>
+                            <img src={img} alt={service_name} />
+                        </PhotoView>
+                    </PhotoProvider>
+
                 </div>
             </div>
             <div className='py-8'>

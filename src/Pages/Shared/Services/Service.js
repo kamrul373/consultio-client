@@ -3,13 +3,20 @@ import { FaStar } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 import pageTitle from '../../../utility/pageTitle';
 import "./Service.css";
+import { PhotoProvider, PhotoView } from 'react-photo-view';
+import 'react-photo-view/dist/react-photo-view.css';
 
 const Service = ({ service }) => {
     const { service_name, img, summary, price, ratting, _id } = service;
     return (
         <div className='single-service'>
             <div className="card bg-base-100 shadow-xl service-card" >
-                <figure><img src={img} alt={service_name} style={{ height: "220px" }} /></figure>
+                <PhotoProvider>
+                    <PhotoView src={img}>
+                        <figure><img src={img} alt={service_name} style={{ height: "220px" }} /></figure>
+                    </PhotoView>
+                </PhotoProvider>
+
                 <div className="card-body">
                     <h2 className="card-title">
                         {service_name}
