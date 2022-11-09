@@ -1,13 +1,15 @@
 import React from 'react';
 import { FaStar } from 'react-icons/fa';
-import title_bg from "../../../assets/img/service_title_bg.jpg"
 import pageTitle from '../../../utility/pageTitle';
+import title_bg from "../../../assets/img/service_title_bg.jpg";
+
+
 const Content = ({ serviceDetails }) => {
     const { service_name, price, img, summary, description, visa_types, documents, age_limit, ratting } = serviceDetails;
     // page title
     pageTitle(service_name);
     return (
-        <div className='lg:w-[70%] w-[90%] mx-auto'>
+        <div className='mb-2'>
             <div className="title-area">
                 <div className="hero mt-4" style={{ backgroundImage: `url(${title_bg})`, height: "250px" }}>
                     <div className="hero-overlay bg-opacity-30"></div>
@@ -23,7 +25,7 @@ const Content = ({ serviceDetails }) => {
             </div>
             <div className='py-8'>
                 <div>
-                    <h2 className='text-3xl font-semibold mb-2'>Summary</h2>
+                    <h2 className='text-3xl font-semibold my-2'>Summary</h2>
                     <p className='text-xl'>{summary}</p>
                     <h3 className='font-semibold text-2xl text-primary mt-4'>Service Charge: {price}</h3>
                 </div>

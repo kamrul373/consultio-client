@@ -1,5 +1,5 @@
 import React from 'react';
-import SectionTitle from '../../Shared/SectionTitle/SectionTitle';
+import SectionTitle from '../SectionTitle/SectionTitle';
 import Service from './Service';
 
 const Services = ({ services }) => {

@@ -1,7 +1,8 @@
 import React from 'react';
 import { useLoaderData } from 'react-router-dom';
 import pageTitle from '../../utility/pageTitle';
-import Services from '../Home/Services/Services';
+import Services from '../Shared/Services/Services';
+
 
 const AllServices = () => {
     // page title

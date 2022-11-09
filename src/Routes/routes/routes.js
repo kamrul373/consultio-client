@@ -1,6 +1,7 @@
 import Main from "../../Layout/Main";
 import AllServices from "../../Pages/AllServices/AllServices";
-import ServiceDetails from "../../Pages/Shared/ServiceDetails/ServiceDetails";
+import ServiceDetails from "../../Pages/ServiceDetails/ServiceDetails";
+
 import SignIn from "../../Pages/SignIn/SignIn";
 import SignUp from "../../Pages/SignUp/SignUp";
 import PrivateRoute from "../PrivateRoute/PrivateRoute";

@@ -1,8 +1,9 @@
 import React from 'react';
 import { Link, useLoaderData } from 'react-router-dom';
 import pageTitle from '../../../utility/pageTitle';
+import Services from '../../Shared/Services/Services';
 import Banner from "../Banner/Banner";
-import Services from '../Services/Services';
+
 
 const Home = () => {
     // page title
