@@ -5,7 +5,7 @@ const FAQ = () => {
     const data = {
         title: "Get Your All Answer Here",
         subtitle: "FAQ",
-        description: "You can learn more from our asked questions"
+        description: "You can learn more from our asked questions.Don’t hasitate to contact with us for inquries!"
     }
     return (
         <div>
