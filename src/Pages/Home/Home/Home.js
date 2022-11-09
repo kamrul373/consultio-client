@@ -1,9 +1,12 @@
 import React from 'react';
 import { Link, useLoaderData } from 'react-router-dom';
+import pageTitle from '../../../utility/pageTitle';
 import Banner from "../Banner/Banner";
 import Services from '../Services/Services';
 
 const Home = () => {
+    // page title
+    pageTitle("Home");
     const services = useLoaderData();
     return (
         <div>

@@ -53,7 +53,8 @@ const AuthContextProvider = ({ children }) => {
         updateUser,
         login,
         logout,
-        loginwithProvider
+        loginwithProvider,
+        loading
     }
 
     return (

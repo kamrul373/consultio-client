@@ -2,9 +2,12 @@ import React, { useState, useContext } from 'react';
 import { toast } from 'react-hot-toast';
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../../context/AuthContextProvider';
+import pageTitle from '../../utility/pageTitle';
 import passwordValidator from '../../utility/passwordValidator';
 
 const SignUp = () => {
+    // page title
+    pageTitle("Sign Up");
     // auth cotext
     const { createUser, updateUser } = useContext(AuthContext);
     // error state

@@ -1,11 +1,20 @@
 import { GithubAuthProvider, GoogleAuthProvider } from 'firebase/auth';
 import React, { useContext, useState } from 'react';
-import { FaGithub, FaGithubAlt, FaGoogle } from 'react-icons/fa';
-import { Link } from 'react-router-dom';
+import { FaGithub, FaGoogle } from 'react-icons/fa';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../context/AuthContextProvider';
+import pageTitle from '../../utility/pageTitle';
 
 const SignIn = () => {
+    // page title
+    pageTitle("Sign In");
+    // auth context
     const { login, loginwithProvider } = useContext(AuthContext);
+    // navigation
+    const navigate = useNavigate();
+    // location
+    const location = useLocation();
+    const from = location.state?.from?.pathname || "/";
     // error state
     const [error, setError] = useState(null)
     // email password login event handler
@@ -20,6 +29,7 @@ const SignIn = () => {
                 const user = response.user;
                 console.log(user);
                 form.reset();
+                navigate(from, { replace: true });
             }).catch(error => setError(error.message))
     }
     // google login
@@ -30,6 +40,7 @@ const SignIn = () => {
             .then(response => {
                 const user = response.user;
                 console.log(user);
+                navigate(from, { replace: true });
             }).catch(error => console.log(error))
     }
     // github 
@@ -40,6 +51,7 @@ const SignIn = () => {
             .then(response => {
                 const user = response.user;
                 console.log(user);
+                navigate(from, { replace: true });
             }).catch(error => console.log(error))
     }
 

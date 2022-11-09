@@ -1,8 +1,11 @@
 import React from 'react';
 import { FaStar } from 'react-icons/fa';
 import title_bg from "../../../assets/img/service_title_bg.jpg"
+import pageTitle from '../../../utility/pageTitle';
 const Content = ({ serviceDetails }) => {
     const { service_name, price, img, summary, description, visa_types, documents, age_limit, ratting } = serviceDetails;
+    // page title
+    pageTitle(service_name);
     return (
         <div className='lg:w-[70%] w-[90%] mx-auto'>
             <div className="title-area">

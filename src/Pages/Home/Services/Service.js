@@ -1,19 +1,21 @@
 import React from 'react';
 import { FaStar } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
+import pageTitle from '../../../utility/pageTitle';
+import "./Service.css";
 
 const Service = ({ service }) => {
     const { service_name, img, summary, price, ratting, _id } = service;
     return (
-        <div className='service-card'>
-            <div className="card  bg-base-100 shadow-xl">
+        <div className='single-service'>
+            <div className="card bg-base-100 shadow-xl service-card" >
                 <figure><img src={img} alt={service_name} style={{ height: "220px" }} /></figure>
                 <div className="card-body">
                     <h2 className="card-title">
                         {service_name}
                         <div className="badge badge-secondary"><span>{ratting}</span></div>
                     </h2>
-                    <p>{summary.length > 100 ? summary.slice(0, 100) + "..." : summary}</p>
+                    <p className='text-justify'>{summary.length > 100 ? summary.slice(0, 100) + "..." : summary}</p>
                     <div className="my-4 text-center">
                         <p className='text-2xl font-semibold'>Service Charge : $ {price}</p>
                     </div>

@@ -3,6 +3,7 @@ import AllServices from "../../Pages/AllServices/AllServices";
 import ServiceDetails from "../../Pages/Shared/ServiceDetails/ServiceDetails";
 import SignIn from "../../Pages/SignIn/SignIn";
 import SignUp from "../../Pages/SignUp/SignUp";
+import PrivateRoute from "../PrivateRoute/PrivateRoute";
 
 const { createBrowserRouter } = require("react-router-dom");
 const { default: Home } = require("../../Pages/Home/Home/Home");
