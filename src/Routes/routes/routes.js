@@ -1,5 +1,6 @@
 import Main from "../../Layout/Main";
 import AllServices from "../../Pages/AllServices/AllServices";
+import Edit from "../../Pages/Edit/Edit";
 import MyReviews from "../../Pages/MyReviews/MyReviews";
 import ServiceDetails from "../../Pages/ServiceDetails/ServiceDetails";
 
@@ -45,7 +46,12 @@ export const router = createBrowserRouter([
             },
             {
                 path: "myreviews",
-                element: <MyReviews></MyReviews>
+                element: <PrivateRoute><MyReviews></MyReviews></PrivateRoute>
+            },
+            {
+                path: "/edit/:id",
+                loader: async ({ params }) => fetch(`http://localhost:5000/review/${params.id}`),
+                element: <PrivateRoute><Edit></Edit></PrivateRoute>
             }
         ]
     }

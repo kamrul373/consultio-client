@@ -20,7 +20,7 @@ const MySingleReview = ({ review, id, handleReviewDelete }) => {
             <td>{customerReview}</td>
             <td>{customerRating}</td>
             <td>
-                <Link to={`/editreview/${_id}`} className="mr-2">
+                <Link to={`/edit/${_id}`} className="mr-2">
                     <button className='badge'>Edit</button>
                 </Link>
                 <button onClick={() => handleReviewDelete(_id)} className='badge badge-error '>Delete</button>
