@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { Link, useLoaderData } from 'react-router-dom';
 import { AuthContext } from '../../context/AuthContextProvider';
 import Content from './Content/Content';
@@ -11,14 +11,24 @@ const ServiceDetails = () => {
     const serviceDetails = useLoaderData();
     // auth
     const { user } = useContext(AuthContext);
+    // all customer reviews for single service state 
+    const [customerReviews, setCustomerReviews] = useState([]);
+
+    const numberOfCustomerGiveReview = customerReviews.length;
 
     return (
         <div className='lg:w-[75%] w-[90%] mx-auto'>
             <Content serviceDetails={serviceDetails}></Content>
-            <Reviews serviceId={serviceDetails._id}></Reviews>
+            <Reviews
+                customerReviews={customerReviews}
+                setCustomerReviews={setCustomerReviews}
+                serviceId={serviceDetails._id}></Reviews>
             {
                 user?.uid || user?.email ?
-                    <ReviewForm serviceId={serviceDetails._id}></ReviewForm>
+                    <ReviewForm
+                        numberOfCustomerGiveReview={numberOfCustomerGiveReview}
+                        currentRatting={serviceDetails.ratting}
+                        serviceId={serviceDetails._id}></ReviewForm>
                     : <h2 className='text-2xl font-semibold'>Please <Link to="/signin" className='text-primary'>Login</Link>  to add a review. </h2>
             }
 

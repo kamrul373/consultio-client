@@ -4,7 +4,7 @@ import ReactStars from 'react-rating-stars-component';
 import { AuthContext } from '../../../context/AuthContextProvider';
 import todayDate from '../../../utility/formateDate';
 
-const ReviewForm = ({ serviceId }) => {
+const ReviewForm = ({ serviceId, currentRatting, numberOfCustomerGiveReview }) => {
     // context
     const { user } = useContext(AuthContext);
     // rating state
@@ -15,7 +15,6 @@ const ReviewForm = ({ serviceId }) => {
     const [toggleName, setNameToggle] = useState(true);
     // sideeffect to maintain disable state of fields
     const date = todayDate();
-
     useEffect(() => {
         if (!user?.displayName) {
             setNameToggle(false)
@@ -43,6 +42,11 @@ const ReviewForm = ({ serviceId }) => {
             name, email, customerRating, customerReview, uid, serviceId, photoURL,
             date
         }
+
+        const updatedRating = (Math.ceil(parseInt(currentRatting) + parseInt(customerRating)) / numberOfCustomerGiveReview).toFixed(2);
+
+        console.log(updatedRating);
+
         // posting review
         fetch("http://localhost:5000/reviewpost", {
             method: "POST",
@@ -53,13 +57,32 @@ const ReviewForm = ({ serviceId }) => {
         })
             .then(response => response.json())
             .then(data => {
+
                 console.log(data)
                 toast.success("Review Published!");
                 form.reset();
-            })
-            .catch(error => console.log(error));
 
-        //console.log(name, email, customerRating, customerReview, uid, serviceId);
+            })
+            .catch(error => {
+                console.log(error)
+                return;
+            });
+
+        console.log(name, email, customerRating, customerReview, uid, serviceId,);
+        const data = {
+            updatedRating
+        }
+        // fetch(`http://localhost:5000/updaterating/${serviceId}`, {
+        //     method: "PATCH",
+        //     headers: {
+        //         "content-type": "application/json"
+        //     },
+        //     body: JSON.stringify(data)
+
+        // })
+        //     .then(response => response.json())
+        //     .then(data => console.log(data))
+
     }
     return (
         <div className='py-8'>

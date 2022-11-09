@@ -1,4 +1,5 @@
 import React from 'react';
+import { FaUserCircle } from 'react-icons/fa';
 import customDate from '../../../utility/customDate';
 
 const Review = ({ review }) => {
@@ -10,7 +11,10 @@ const Review = ({ review }) => {
                 <div className="flex justify-between p-4">
                     <div className="flex space-x-4">
                         <div>
-                            <img src={photoURL} alt="" className="object-cover w-12 h-12 rounded-full dark:bg-gray-500" />
+                            {
+                                photoURL ? <img src={photoURL} alt="" className="object-cover w-12 h-12 rounded-full dark:bg-gray-500" /> : <FaUserCircle></FaUserCircle>
+                            }
+
                         </div>
                         <div>
                             <h4 className="font-bold">{name}</h4>

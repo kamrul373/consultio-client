@@ -1,5 +1,6 @@
 import Main from "../../Layout/Main";
 import AllServices from "../../Pages/AllServices/AllServices";
+import MyReviews from "../../Pages/MyReviews/MyReviews";
 import ServiceDetails from "../../Pages/ServiceDetails/ServiceDetails";
 
 import SignIn from "../../Pages/SignIn/SignIn";
@@ -41,6 +42,10 @@ export const router = createBrowserRouter([
             {
                 path: "signup",
                 element: <SignUp></SignUp>
+            },
+            {
+                path: "myreviews",
+                element: <MyReviews></MyReviews>
             }
         ]
     }
