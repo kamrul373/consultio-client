@@ -52,7 +52,7 @@ const MyReviews = () => {
                                     <th>Action</th>
                                 </tr>
                             </thead>
-                            <tbody>
+                            <tbody className='text-xl'>
                                 {
                                     reviews.map((review, idx) => <MySingleReview
                                         key={review._id}

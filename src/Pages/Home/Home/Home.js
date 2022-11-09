@@ -3,6 +3,9 @@ import { Link, useLoaderData } from 'react-router-dom';
 import pageTitle from '../../../utility/pageTitle';
 import Services from '../../Shared/Services/Services';
 import Banner from "../Banner/Banner";
+import Contact from '../Contact/Contact';
+import FAQ from '../FAQ/FAQ';
+import Step from '../Step/Step';
 
 
 const Home = () => {
@@ -18,6 +21,9 @@ const Home = () => {
                     <button className='btn btn-secondary btn-wide'>See All</button>
                 </Link>
             </div>
+            <Step></Step>
+            <FAQ></FAQ>
+            <Contact></Contact>
         </div>
     );
 };
