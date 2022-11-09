@@ -2,6 +2,7 @@ import React, { useContext, useEffect, useState } from 'react';
 import { toast } from 'react-hot-toast';
 import ReactStars from 'react-rating-stars-component';
 import { AuthContext } from '../../../context/AuthContextProvider';
+import todayDate from '../../../utility/formateDate';
 
 const ReviewForm = ({ serviceId }) => {
     // context
@@ -13,6 +14,8 @@ const ReviewForm = ({ serviceId }) => {
     const [toggleEmail, setEmailToggle] = useState(true)
     const [toggleName, setNameToggle] = useState(true);
     // sideeffect to maintain disable state of fields
+    const date = todayDate();
+
     useEffect(() => {
         if (!user?.displayName) {
             setNameToggle(false)
@@ -34,11 +37,13 @@ const ReviewForm = ({ serviceId }) => {
         const customerRating = serviceRating;
         const customerReview = form.reviewText.value;
         const uid = user?.uid;
-
+        const photoURL = user?.photoURL;
+        // customer data along with required data
         const reviewData = {
-            name, email, customerRating, customerReview, uid, serviceId
+            name, email, customerRating, customerReview, uid, serviceId, photoURL,
+            date
         }
-
+        // posting review
         fetch("http://localhost:5000/reviewpost", {
             method: "POST",
             headers: {
@@ -54,11 +59,11 @@ const ReviewForm = ({ serviceId }) => {
             })
             .catch(error => console.log(error));
 
-        console.log(name, email, customerRating, customerReview, uid, serviceId);
+        //console.log(name, email, customerRating, customerReview, uid, serviceId);
     }
     return (
         <div className='py-8'>
-            <h2 className='text-2xl font-semibold mb-4'>Give Your Review</h2>
+            <h2 className='text-2xl font-semibold mb-4'>Write a Review</h2>
             <form onSubmit={handleCustomerReview}>
                 <div className="user-intro">
                     <div className="form-control ">
@@ -73,7 +78,7 @@ const ReviewForm = ({ serviceId }) => {
                             <span className="label-text">Your Email</span>
                         </label>
                         <input name="email" type="email" placeholder="Your Email" className="input input-bordered input-primary w-full  "
-                            defaultValue={user?.email} disabled={toggleEmail} />
+                            defaultValue={user?.email} disabled={toggleEmail} required />
                     </div>
                     <div className='my-3'>
                         <h2 className='text-xl font-semibold'>Service Rating</h2>

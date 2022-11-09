@@ -15,7 +15,7 @@ const ServiceDetails = () => {
     return (
         <div className='lg:w-[75%] w-[90%] mx-auto'>
             <Content serviceDetails={serviceDetails}></Content>
-            <Reviews></Reviews>
+            <Reviews serviceId={serviceDetails._id}></Reviews>
             {
                 user?.uid || user?.email ?
                     <ReviewForm serviceId={serviceDetails._id}></ReviewForm>
