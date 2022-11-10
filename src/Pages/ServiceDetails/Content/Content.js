@@ -36,8 +36,8 @@ const Content = ({ serviceDetails }) => {
                     <h3 className='font-semibold lg:text-2xl text-xl text-primary mt-4'>Service Charge: {price}</h3>
                 </div>
                 <div className=' py-4'>
-                    <h4 className='lg:text-3xl text-xl'>Customer Ratting : {ratting} <FaStar className='inline-block text-yellow-400'></FaStar> </h4>
-                    <p className='mt-4 font-bold lg:text-2xl text-xl'>Prefered Age : {age_limit}</p>
+                    <h4 className='lg:text-3xl text-xl'>Customer Ratting : {ratting && ratting} <FaStar className='inline-block text-yellow-400'></FaStar> </h4>
+                    <p className='mt-4 font-bold lg:text-2xl text-xl'>Prefered Age : {age_limit && age_limit}</p>
                 </div>
                 <div>
                     <h2 className='lg:text-4xl text-3xl font-semibold my-4'>What will client  get from Consultant & why should choose that type of visa ? </h2>
@@ -45,7 +45,7 @@ const Content = ({ serviceDetails }) => {
                     <h2 className='lg:text-3xl text-2xl font-semibold mt-3'>Available Visa Type You can Choose : </h2>
                     <ul className='list-decimal pl-4 mt-3'>
                         {
-                            visa_types.map((vtype, idx) => <li className='text-xl mb-2' key={idx}>{vtype}</li>)
+                            visa_types?.map((vtype, idx) => <li className='text-xl mb-2' key={idx}>{vtype}</li>)
                         }
                     </ul>
                 </div>
@@ -53,7 +53,7 @@ const Content = ({ serviceDetails }) => {
                     <h2 className='lg:text-4xl text-3xl font-semibold my-4'>Required Documents for smooth migration process </h2>
                     <ul className='list-decimal pl-4'>
                         {
-                            documents.map((doc, idx) => <li className='text-xl mb-2' key={idx}>{doc}</li>)
+                            documents?.map((doc, idx) => <li className='text-xl mb-2' key={idx}>{doc}</li>)
                         }
                     </ul>
                 </div>

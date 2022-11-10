@@ -32,6 +32,12 @@ const Header = () => {
               </li>
             }
             {
+              user?.uid &&
+              <li>
+                <Link to="/addservice">Add Service</Link>
+              </li>
+            }
+            {
               !user?.uid ?
                 <>
                   <li className='btn btn-primary'>
@@ -67,6 +73,12 @@ const Header = () => {
             user?.uid &&
             <li>
               <Link to="/myreviews">My reviews</Link>
+            </li>
+          }
+          {
+            user?.uid &&
+            <li>
+              <Link to="/addservice">Add Service</Link>
             </li>
           }
           {
