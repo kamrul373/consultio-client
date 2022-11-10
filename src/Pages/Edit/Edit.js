@@ -2,7 +2,10 @@ import React, { useEffect, useState } from 'react';
 import { useLoaderData, useNavigate } from 'react-router-dom';
 import ReactStars from 'react-rating-stars-component';
 import { toast } from 'react-hot-toast';
+import pageTitle from '../../utility/pageTitle';
 const Edit = () => {
+    // page title
+    pageTitle("Edit Review");
     // loader
     const reviewData = useLoaderData();
     // rating state
@@ -21,6 +24,7 @@ const Edit = () => {
     const handleRating = (value) => {
         setServiceRating(value);
     }
+    // update review event handler
     const handleUpdateReview = (e) => {
         e.preventDefault();
         const review = e.target.reviewText.value;

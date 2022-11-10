@@ -1,7 +1,11 @@
 import React from 'react';
 import { toast } from 'react-hot-toast';
+import pageTitle from '../../utility/pageTitle';
 
 const AddService = () => {
+    // page title
+    pageTitle("Add New Service");
+    // add service event handler
     const handleServicePublish = (e) => {
         e.preventDefault();
         const form = e.target;
@@ -18,7 +22,7 @@ const AddService = () => {
         const data = {
             service_name, summary, description, price, documents, visa_types, img, age_limit, ratting
         }
-
+        // posting service request to server
         fetch("http://localhost:5000/addservice", {
             method: "POST",
             headers: {
