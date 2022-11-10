@@ -42,7 +42,7 @@ const ReviewForm = ({ serviceId, customerReviews, setCustomerReviews }) => {
             name, email, customerRating, customerReview, uid, serviceId, photoURL,
             date
         }
-        const newReviewsCollection = [...customerReviews, reviewData];
+        const newReviewsCollection = [reviewData, ...customerReviews];
         setCustomerReviews(newReviewsCollection)
 
         // posting review
