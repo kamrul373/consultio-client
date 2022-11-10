@@ -69,9 +69,9 @@ const ReviewForm = ({ serviceId, currentRatting, numberOfCustomerGiveReview }) =
             });
 
         console.log(name, email, customerRating, customerReview, uid, serviceId,);
-        const data = {
-            updatedRating
-        }
+        // const data = {
+        //     updatedRating
+        // }
         // fetch(`http://localhost:5000/updaterating/${serviceId}`, {
         //     method: "PATCH",
         //     headers: {

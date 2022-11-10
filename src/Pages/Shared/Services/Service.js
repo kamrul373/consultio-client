@@ -1,7 +1,5 @@
 import React from 'react';
-import { FaStar } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
-import pageTitle from '../../../utility/pageTitle';
 import "./Service.css";
 import { PhotoProvider, PhotoView } from 'react-photo-view';
 import 'react-photo-view/dist/react-photo-view.css';

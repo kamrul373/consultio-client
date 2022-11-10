@@ -3,7 +3,7 @@ import { FaUserCircle } from 'react-icons/fa';
 import customDate from '../../../utility/customDate';
 
 const Review = ({ review }) => {
-    const { name, email, date, photoURL, customerRating, customerReview } = review;
+    const { name, date, photoURL, customerRating, customerReview } = review;
     const newDate = customDate(date);
     return (
         <div>

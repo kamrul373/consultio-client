@@ -27,7 +27,23 @@ const SignIn = () => {
         login(email, password)
             .then(response => {
                 const user = response.user;
-                console.log(user);
+                const currentUser = {
+                    email: user.email
+                }
+                // requesting for an authorization token
+                fetch("http://localhost:5000/jwt", {
+                    method: "POST",
+                    headers: {
+                        "content-type": "application/json"
+                    },
+                    body: JSON.stringify(currentUser)
+                })
+                    .then(response => response.json())
+                    .then(data => {
+                        localStorage.setItem("consultio-token", data.token)
+                    })
+                    .catch(error => console.log(error));
+
                 form.reset();
                 navigate(from, { replace: true });
             }).catch(error => setError(error.message))

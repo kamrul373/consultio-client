@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 import Review from '../Review/Review';
 
 const Reviews = ({ serviceId, customerReviews, setCustomerReviews }) => {
