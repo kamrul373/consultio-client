@@ -1,0 +1,10 @@
+@media all and (max-width:768px) {
+    .banner-container {
+        padding: 100px 0 50px 0;
+    }
+
+    .banner {
+        height: 100%;
+        padding: 50px 10px;
+    }
+}

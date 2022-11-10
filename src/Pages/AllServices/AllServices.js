@@ -9,7 +9,7 @@ const AllServices = () => {
     pageTitle("Services")
     const services = useLoaderData();
     return (
-        <div>
+        <div className='mt-28'>
             <Services services={services}></Services>
         </div>
     );

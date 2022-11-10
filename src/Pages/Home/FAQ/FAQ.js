@@ -10,7 +10,7 @@ const FAQ = () => {
     return (
         <div>
             <SectionTitle data={data}></SectionTitle>
-            <div className='py-8 px-12 my-8 grid grid-cols-1 lg:grid-cols-2 gap-6'>
+            <div className='py-8 lg:px-12 px-8 my-8 grid grid-cols-1 lg:grid-cols-2 gap-6 lg:text-justify'>
                 <div className='shadow-lg p-9 border border-blue-700'>
                     <h2 className='text-4xl font-bold'>How long does it take visa to process?</h2>
                     <p className='text-xl mt-4'>The processing timeframe for transfers of a visa to a new passport is 4 to 6 weeks.</p>

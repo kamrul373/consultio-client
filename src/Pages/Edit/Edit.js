@@ -45,7 +45,7 @@ const Edit = () => {
             })
     }
     return (
-        <div className='px-24 mt-8'>
+        <div className='lg:px-32 px-12 mb-8 mt-32'>
             <h3 className='text-lg font-semibold'>Update Review</h3>
             <h2 className='text-2xl'>Service Name : {service?.service_name}</h2>
             <form onSubmit={handleUpdateReview}>

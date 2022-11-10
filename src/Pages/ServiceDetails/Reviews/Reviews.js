@@ -10,7 +10,7 @@ const Reviews = ({ serviceId, customerReviews, setCustomerReviews }) => {
     }, [serviceId, setCustomerReviews]);
     return (
         <div>
-            <h2 className='text-3xl font-semibold'>Customer Reviews</h2>
+            <h2 className='lg:text-3xl text-2xl font-semibold'>Customer Reviews</h2>
             {
                 customerReviews.map((review, idx) => <Review
                     key={idx}

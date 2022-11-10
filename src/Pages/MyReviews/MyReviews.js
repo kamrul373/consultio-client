@@ -41,8 +41,9 @@ const MyReviews = () => {
             {
                 reviews.length > 0 ?
 
-                    <div className="mt-8">
-                        <table className="table table-zebra w-full">
+                    <div className="mt-32">
+                        <h2 className='text-4xl font-semibold text-center my-8'>My Reviews</h2>
+                        <table className="lg:table lg:table-zebra table-auto w-full overflow-x-hidden ">
                             <thead>
                                 <tr>
                                     <th></th>
@@ -52,7 +53,7 @@ const MyReviews = () => {
                                     <th>Action</th>
                                 </tr>
                             </thead>
-                            <tbody className='text-xl'>
+                            <tbody className='lg:text-xl'>
                                 {
                                     reviews.map((review, idx) => <MySingleReview
                                         key={review._id}

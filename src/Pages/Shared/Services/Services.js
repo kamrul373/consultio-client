@@ -9,7 +9,7 @@ const Services = ({ services }) => {
         description: "The Most Trusted Immigration and Visa Consultant can assist you in obtaining a favorable result in your case."
     }
     return (
-        <div >
+        <div className='lg:px-12 px-7'>
             <SectionTitle data={data}></SectionTitle>
             <div className='grid grid-cols-1 lg:grid-cols-3 justify-items-center gap-20'>
                 {

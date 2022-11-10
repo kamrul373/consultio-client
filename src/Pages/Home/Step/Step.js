@@ -5,7 +5,7 @@ const Step = () => {
     const data = {
         title: "The fields on which I give services",
         subtitle: "Popular Category",
-        description: "I can assist you in obtaining a favorable result in your case.Sponsoring and managing work visas parts now becoming results in the experience."
+        description: "I can assist you in obtaining a favorable result in your case."
     }
     return (
         <div className="px-8 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">

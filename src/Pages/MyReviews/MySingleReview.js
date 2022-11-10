@@ -27,11 +27,11 @@ const MySingleReview = ({ review, id, handleReviewDelete }) => {
             <td>{customerRating}</td>
             <td>
                 <Link to={`/edit/${_id}`} className="mr-2">
-                    <button className='btn text-xl btn-primary'>
+                    <button className='btn text-xl btn-primary mb-2 lg:mb-0'>
                         <FaEdit></FaEdit>
                     </button>
                 </Link>
-                <button onClick={() => handleReviewDelete(_id)} className='btn btn-error '>
+                <button onClick={() => handleReviewDelete(_id)} className='btn btn-error  mb-2 lg:mb-0'>
                     <FaTrashAlt className='text-xl'></FaTrashAlt>
                 </button>
             </td>
