@@ -5,6 +5,7 @@ import Blogs from "../../Pages/Blogs/Blogs";
 import Edit from "../../Pages/Edit/Edit";
 import MyReviews from "../../Pages/MyReviews/MyReviews";
 import ServiceDetails from "../../Pages/ServiceDetails/ServiceDetails";
+import Forgot from "../../Pages/SignIn/Forgot/Forgot";
 
 import SignIn from "../../Pages/SignIn/SignIn";
 import SignUp from "../../Pages/SignUp/SignUp";
@@ -62,7 +63,12 @@ export const router = createBrowserRouter([
             {
                 path: "/blogs",
                 element: <Blogs></Blogs>
+            },
+            {
+                path: "/forgot",
+                element: <Forgot></Forgot>
             }
+
         ]
     }
 ]);

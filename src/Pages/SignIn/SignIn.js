@@ -4,6 +4,7 @@ import { FaGithub, FaGoogle } from 'react-icons/fa';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../context/AuthContextProvider';
 import pageTitle from '../../utility/pageTitle';
+import Forgot from './Forgot/Forgot';
 
 const SignIn = () => {
     // page title
@@ -104,7 +105,7 @@ const SignIn = () => {
     }
 
     return (
-        <div>
+        <div className='mt-32'>
             <div className="bg-base-200 py-8">
                 <div className=" lg:w-[40%] mx-auto w-[90%] ">
                     <div className="text-center lg:text-left">
@@ -123,8 +124,8 @@ const SignIn = () => {
                                     <span className="label-text">Password</span>
                                 </label>
                                 <input name='password' type="password" placeholder="password" className="input input-bordered" />
-                                <label className="label">
-                                    <Link to="/forgot" className="label-text-alt link link-hover">Forgot password?</Link>
+                                <label className="label text-primary cursor-pointer">
+                                    <Link to="/forgot">Forgot password?</Link>
                                 </label>
                             </div>
                             <div className='text-center text-xl'>

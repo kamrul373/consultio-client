@@ -43,7 +43,7 @@ const SignUp = () => {
         passwordValidator(password, setError);
     }
     return (
-        <div>
+        <div className='mt-32'>
             <div className="bg-base-200 py-8">
                 <div className=" lg:w-[40%] mx-auto w-[90%] ">
                     <div className="text-center lg:text-left">
