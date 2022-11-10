@@ -13,7 +13,11 @@ const MyReviews = () => {
     const url = user?.email ? `http://localhost:5000/userreviews?email=${user?.email}` : `http://localhost:5000/userreviews?uid=${user?.uid}`;
 
     useEffect(() => {
-        fetch(url)
+        fetch(url, {
+            headers: {
+                authorization: `Bearer ${localStorage.getItem("consultio-token")}`
+            }
+        })
             .then(response => response.json())
             .then(data => setReviews(data));
     }, [url]);

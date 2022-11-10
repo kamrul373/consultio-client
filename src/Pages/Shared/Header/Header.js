@@ -7,7 +7,7 @@ const Header = () => {
   const { user, logout } = useContext(AuthContext);
   const handlLogOut = () => {
     logout()
-      .then(() => { })
+      .then(() => localStorage.removeItem("consultio-token"))
       .catch(error => console.log(error));
   }
   return (
