@@ -9,7 +9,7 @@ import 'react-photo-view/dist/react-photo-view.css';
 const Service = ({ service }) => {
     const { service_name, img, summary, price, ratting, _id } = service;
     return (
-        <div className='single-service'>
+        <div className='single-service overflow-x-hidden'>
             <div className="card bg-base-100 shadow-xl service-card" >
                 <PhotoProvider>
                     <PhotoView src={img}>
