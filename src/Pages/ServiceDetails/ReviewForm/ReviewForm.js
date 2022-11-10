@@ -4,7 +4,7 @@ import ReactStars from 'react-rating-stars-component';
 import { AuthContext } from '../../../context/AuthContextProvider';
 import todayDate from '../../../utility/formateDate';
 
-const ReviewForm = ({ serviceId, currentRatting, numberOfCustomerGiveReview }) => {
+const ReviewForm = ({ serviceId, customerReviews, setCustomerReviews }) => {
     // context
     const { user } = useContext(AuthContext);
     // rating state
@@ -42,10 +42,8 @@ const ReviewForm = ({ serviceId, currentRatting, numberOfCustomerGiveReview }) =
             name, email, customerRating, customerReview, uid, serviceId, photoURL,
             date
         }
-
-        const updatedRating = (Math.ceil(parseInt(currentRatting) + parseInt(customerRating)) / numberOfCustomerGiveReview).toFixed(2);
-
-        console.log(updatedRating);
+        const newReviewsCollection = [...customerReviews, reviewData];
+        setCustomerReviews(newReviewsCollection)
 
         // posting review
         fetch("http://localhost:5000/reviewpost", {
@@ -68,21 +66,7 @@ const ReviewForm = ({ serviceId, currentRatting, numberOfCustomerGiveReview }) =
                 return;
             });
 
-        console.log(name, email, customerRating, customerReview, uid, serviceId,);
-        // const data = {
-        //     updatedRating
-        // }
-        // fetch(`http://localhost:5000/updaterating/${serviceId}`, {
-        //     method: "PATCH",
-        //     headers: {
-        //         "content-type": "application/json"
-        //     },
-        //     body: JSON.stringify(data)
-
-        // })
-        //     .then(response => response.json())
-        //     .then(data => console.log(data))
-
+        // console.log(name, email, customerRating, customerReview, uid, serviceId,);
     }
     return (
         <div className='py-8'>

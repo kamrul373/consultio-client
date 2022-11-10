@@ -14,8 +14,6 @@ const ServiceDetails = () => {
     // all customer reviews for single service state 
     const [customerReviews, setCustomerReviews] = useState([]);
 
-    const numberOfCustomerGiveReview = customerReviews.length;
-
     return (
         <div className='lg:w-[75%] w-[90%] mx-auto'>
             <Content serviceDetails={serviceDetails}></Content>
@@ -26,7 +24,8 @@ const ServiceDetails = () => {
             {
                 user?.uid || user?.email ?
                     <ReviewForm
-                        numberOfCustomerGiveReview={numberOfCustomerGiveReview}
+                        customerReviews={customerReviews}
+                        setCustomerReviews={setCustomerReviews}
                         currentRatting={serviceDetails.ratting}
                         serviceId={serviceDetails._id}></ReviewForm>
                     : <h2 className='text-2xl my-8 font-semibold'>Please <Link to="/signin" className='text-primary'>Login</Link>  to add a review. </h2>
