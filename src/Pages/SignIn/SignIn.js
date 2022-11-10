@@ -4,7 +4,7 @@ import { FaGithub, FaGoogle } from 'react-icons/fa';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../context/AuthContextProvider';
 import pageTitle from '../../utility/pageTitle';
-import Forgot from './Forgot/Forgot';
+
 
 const SignIn = () => {
     // page title

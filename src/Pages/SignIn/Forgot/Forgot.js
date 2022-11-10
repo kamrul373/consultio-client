@@ -1,6 +1,5 @@
 import React, { useContext } from 'react';
 import { toast } from 'react-hot-toast';
-import { FaRegWindowClose } from 'react-icons/fa';
 import { AuthContext } from '../../../context/AuthContextProvider';
 
 const Forgot = () => {
