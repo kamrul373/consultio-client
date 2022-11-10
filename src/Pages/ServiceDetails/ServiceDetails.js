@@ -29,7 +29,7 @@ const ServiceDetails = () => {
                         numberOfCustomerGiveReview={numberOfCustomerGiveReview}
                         currentRatting={serviceDetails.ratting}
                         serviceId={serviceDetails._id}></ReviewForm>
-                    : <h2 className='text-2xl font-semibold'>Please <Link to="/signin" className='text-primary'>Login</Link>  to add a review. </h2>
+                    : <h2 className='text-2xl my-8 font-semibold'>Please <Link to="/signin" className='text-primary'>Login</Link>  to add a review. </h2>
             }
 
         </div>

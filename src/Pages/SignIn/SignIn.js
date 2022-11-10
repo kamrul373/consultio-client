@@ -55,6 +55,22 @@ const SignIn = () => {
         loginwithProvider(googleProvider)
             .then(response => {
                 const user = response.user;
+                const currentUser = {
+                    email: user.email
+                }
+                // requesting for an authorization token
+                fetch("http://localhost:5000/jwt", {
+                    method: "POST",
+                    headers: {
+                        "content-type": "application/json"
+                    },
+                    body: JSON.stringify(currentUser)
+                })
+                    .then(response => response.json())
+                    .then(data => {
+                        localStorage.setItem("consultio-token", data.token)
+                    })
+                    .catch(error => console.log(error));
                 console.log(user);
                 navigate(from, { replace: true });
             }).catch(error => console.log(error))
@@ -66,6 +82,22 @@ const SignIn = () => {
         loginwithProvider(githubProvider)
             .then(response => {
                 const user = response.user;
+                const currentUser = {
+                    uid: user.uid
+                }
+                // requesting for an authorization token
+                fetch("http://localhost:5000/jwt", {
+                    method: "POST",
+                    headers: {
+                        "content-type": "application/json"
+                    },
+                    body: JSON.stringify(currentUser)
+                })
+                    .then(response => response.json())
+                    .then(data => {
+                        localStorage.setItem("consultio-token", data.token)
+                    })
+                    .catch(error => console.log(error));
                 console.log(user);
                 navigate(from, { replace: true });
             }).catch(error => console.log(error))
