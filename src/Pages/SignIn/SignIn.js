@@ -72,7 +72,7 @@ const SignIn = () => {
                         localStorage.setItem("consultio-token", data.token)
                     })
                     .catch(error => console.log(error));
-                console.log(user);
+
                 navigate(from, { replace: true });
             }).catch(error => console.log(error))
     }
@@ -99,7 +99,7 @@ const SignIn = () => {
                         localStorage.setItem("consultio-token", data.token)
                     })
                     .catch(error => console.log(error));
-                console.log(user);
+
                 navigate(from, { replace: true });
             }).catch(error => console.log(error))
     }

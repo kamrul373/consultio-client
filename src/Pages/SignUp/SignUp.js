@@ -24,8 +24,6 @@ const SignUp = () => {
 
         createUser(email, password)
             .then(response => {
-                const user = response.user;
-                console.log(user);
                 // update profile 
                 const profile = {
                     displayName: name,
