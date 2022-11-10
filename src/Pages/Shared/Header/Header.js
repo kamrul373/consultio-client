@@ -25,6 +25,9 @@ const Header = () => {
             <li>
               <Link to="/services">Services</Link>
             </li>
+            <li>
+              <Link to="/blogs">Blogs</Link>
+            </li>
             {
               user?.uid &&
               <li>
@@ -68,6 +71,9 @@ const Header = () => {
           </li>
           <li>
             <Link to="/services">Services</Link>
+          </li>
+          <li>
+            <Link to="/blogs">Blogs</Link>
           </li>
           {
             user?.uid &&

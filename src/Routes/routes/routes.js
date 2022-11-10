@@ -1,6 +1,7 @@
 import Main from "../../Layout/Main";
 import AddService from "../../Pages/AddService/AddService";
 import AllServices from "../../Pages/AllServices/AllServices";
+import Blogs from "../../Pages/Blogs/Blogs";
 import Edit from "../../Pages/Edit/Edit";
 import MyReviews from "../../Pages/MyReviews/MyReviews";
 import ServiceDetails from "../../Pages/ServiceDetails/ServiceDetails";
@@ -38,15 +39,15 @@ export const router = createBrowserRouter([
                 element: <AllServices></AllServices>
             },
             {
-                path: "signin",
+                path: "/signin",
                 element: <SignIn></SignIn>
             },
             {
-                path: "signup",
+                path: "/signup",
                 element: <SignUp></SignUp>
             },
             {
-                path: "myreviews",
+                path: "/myreviews",
                 element: <PrivateRoute><MyReviews></MyReviews></PrivateRoute>
             },
             {
@@ -55,8 +56,12 @@ export const router = createBrowserRouter([
                 element: <PrivateRoute><Edit></Edit></PrivateRoute>
             },
             {
-                path: "addservice",
+                path: "/addservice",
                 element: <PrivateRoute><AddService></AddService></PrivateRoute>
+            },
+            {
+                path: "/blogs",
+                element: <Blogs></Blogs>
             }
         ]
     }
