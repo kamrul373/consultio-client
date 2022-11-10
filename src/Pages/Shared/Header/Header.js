@@ -11,7 +11,7 @@ const Header = () => {
       .catch(error => console.log(error));
   }
   return (
-    <header className="navbar bg-base-100 py-5 menu-area fixed top-0 z-50">
+    <header className="navbar bg-base-100 py-5 menu-area fixed top-0 z-50 lg:px-8">
       <div className="navbar-start start">
         <div className="dropdown">
           <label tabIndex={0} className="btn btn-ghost lg:hidden">
