@@ -46,7 +46,7 @@ const ReviewForm = ({ serviceId, customerReviews, setCustomerReviews }) => {
         setCustomerReviews(newReviewsCollection)
 
         // posting review
-        fetch("http://localhost:5000/reviewpost", {
+        fetch("https://consultio-server.vercel.app/reviewpost", {
             method: "POST",
             headers: {
                 "content-type": "application/json"

@@ -16,7 +16,7 @@ const Edit = () => {
     // service state
     const [service, setService] = useState();
     useEffect(() => {
-        fetch(`http://localhost:5000/services/${reviewData.serviceId}`)
+        fetch(`https://consultio-server.vercel.app/services/${reviewData.serviceId}`)
             .then(response => response.json())
             .then(data => setService(data))
     }, [reviewData.serviceId]);
@@ -34,7 +34,7 @@ const Edit = () => {
             customerRating: rating
         }
 
-        fetch(`http://localhost:5000/update/${reviewData._id}`, {
+        fetch(`https://consultio-server.vercel.app/update/${reviewData._id}`, {
             method: "PATCH",
             headers: {
                 "content-type": "application/json"

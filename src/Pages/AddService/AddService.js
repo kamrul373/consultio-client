@@ -23,7 +23,7 @@ const AddService = () => {
             service_name, summary, description, price, documents, visa_types, img, age_limit, ratting
         }
         // posting service request to server
-        fetch("http://localhost:5000/addservice", {
+        fetch("https://consultio-server.vercel.app/addservice", {
             method: "POST",
             headers: {
                 "content-type": "application/json"

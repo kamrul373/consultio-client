@@ -21,22 +21,22 @@ export const router = createBrowserRouter([
         children: [
             {
                 path: "/",
-                loader: async () => fetch("http://localhost:5000/services/limited"),
+                loader: async () => fetch("https://consultio-server.vercel.app/services/limited"),
                 element: <Home></Home>
             },
             {
                 path: "/home",
-                loader: async () => fetch("http://localhost:5000/services/limited"),
+                loader: async () => fetch("https://consultio-server.vercel.app/services/limited"),
                 element: <Home></Home>
             },
             {
                 path: "/services/:id",
-                loader: async ({ params }) => fetch(`http://localhost:5000/services/${params.id}`),
+                loader: async ({ params }) => fetch(`https://consultio-server.vercel.app/services/${params.id}`),
                 element: <ServiceDetails></ServiceDetails>
             },
             {
                 path: "/services",
-                loader: async () => fetch("http://localhost:5000/services/"),
+                loader: async () => fetch("https://consultio-server.vercel.app/services/"),
                 element: <AllServices></AllServices>
             },
             {
@@ -53,7 +53,7 @@ export const router = createBrowserRouter([
             },
             {
                 path: "/edit/:id",
-                loader: async ({ params }) => fetch(`http://localhost:5000/review/${params.id}`),
+                loader: async ({ params }) => fetch(`https://consultio-server.vercel.app/review/${params.id}`),
                 element: <PrivateRoute><Edit></Edit></PrivateRoute>
             },
             {

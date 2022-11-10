@@ -9,7 +9,7 @@ const MySingleReview = ({ review, id, handleReviewDelete }) => {
     // service state
     const [service, setService] = useState();
     useEffect(() => {
-        fetch(`http://localhost:5000/services/${serviceId}`)
+        fetch(`https://consultio-server.vercel.app/services/${serviceId}`)
             .then(response => response.json())
             .then(data => setService(data))
     }, [serviceId]);

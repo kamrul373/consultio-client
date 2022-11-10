@@ -4,7 +4,7 @@ import Review from '../Review/Review';
 const Reviews = ({ serviceId, customerReviews, setCustomerReviews }) => {
     // customer reviews 
     useEffect(() => {
-        fetch(`http://localhost:5000/reviews/${serviceId}`)
+        fetch(`https://consultio-server.vercel.app/reviews/${serviceId}`)
             .then(response => response.json())
             .then(reviews => setCustomerReviews(reviews));
     }, [serviceId, setCustomerReviews]);

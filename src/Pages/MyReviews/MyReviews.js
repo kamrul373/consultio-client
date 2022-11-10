@@ -10,7 +10,7 @@ const MyReviews = () => {
     const { user } = useContext(AuthContext)
     // getting single user reviews
     const [reviews, setReviews] = useState([]);
-    const url = user?.email ? `http://localhost:5000/userreviews?email=${user?.email}` : `http://localhost:5000/userreviews?uid=${user?.uid}`;
+    const url = user?.email ? `https://consultio-server.vercel.app/userreviews?email=${user?.email}` : `https://consultio-server.vercel.app/userreviews?uid=${user?.uid}`;
 
     useEffect(() => {
         fetch(url, {
@@ -27,7 +27,7 @@ const MyReviews = () => {
         const confirm = window.confirm("Are you sure you want to delete");
         console.log(id);
         if (confirm) {
-            fetch(`http://localhost:5000/delete/${id}`, {
+            fetch(`https://consultio-server.vercel.app/delete/${id}`, {
                 method: "DELETE"
             })
                 .then(response => response.json())

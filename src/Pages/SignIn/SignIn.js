@@ -32,7 +32,7 @@ const SignIn = () => {
                     email: user.email
                 }
                 // requesting for an authorization token
-                fetch("http://localhost:5000/jwt", {
+                fetch("https://consultio-server.vercel.app/jwt", {
                     method: "POST",
                     headers: {
                         "content-type": "application/json"
@@ -60,7 +60,7 @@ const SignIn = () => {
                     email: user.email
                 }
                 // requesting for an authorization token
-                fetch("http://localhost:5000/jwt", {
+                fetch("https://consultio-server.vercel.app/jwt", {
                     method: "POST",
                     headers: {
                         "content-type": "application/json"
@@ -87,7 +87,7 @@ const SignIn = () => {
                     uid: user.uid
                 }
                 // requesting for an authorization token
-                fetch("http://localhost:5000/jwt", {
+                fetch("https://consultio-server.vercel.app/jwt", {
                     method: "POST",
                     headers: {
                         "content-type": "application/json"
