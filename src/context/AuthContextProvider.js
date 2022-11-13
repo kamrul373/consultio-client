@@ -59,7 +59,7 @@ const AuthContextProvider = ({ children }) => {
         forgotpassword,
         logout,
         loginwithProvider,
-        loading
+        loading,
     }
 
     return (

@@ -1,6 +1,8 @@
 import React from 'react';
+import pageTitle from '../../utility/pageTitle';
 import "./blogs.css";
 const Blogs = () => {
+    pageTitle("Blogs")
     return (
         <div className='blogs mt-32 lg:px-12 px-8 mb-8 lg:w-[75%] w-[90%]  mx-auto'>
             {/*  blog 1 */}
