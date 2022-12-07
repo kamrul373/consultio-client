@@ -9,8 +9,8 @@
 * Logged in user can give review , edit , delete review .
 * Service adding features , showing each service review desc mode .
 * Private route protection 
-* spinner 
-* faq , blogs , contact us etc 
+* Spinner 
+* FAQ , Blogs , Contact us etc 
 * fAST Loading 
 
 
