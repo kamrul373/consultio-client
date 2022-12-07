@@ -2,9 +2,8 @@
 ## Live url : https://consultio-f2fd2.web.app/
 
 ## Features : 
-* Fully Responsive 
+* I handled Loading state management
 * User authentication - Firebase , .env.local , registration , login , forget password recover implemented.
-* 
 * Social login
 * Token based authentication to visit my reviews 
 * Logged in user can give review , edit , delete review .
