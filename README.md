@@ -3,7 +3,8 @@
 
 ## Features : 
 * Fully Responsive 
-* User authentication - Firebase , .env.local , registration , login , forget password recover .
+* User authentication - Firebase , .env.local , registration , login , forget password recover implemented.
+* 
 * Social login
 * Token based authentication to visit my reviews 
 * Logged in user can give review , edit , delete review .
@@ -11,7 +12,7 @@
 * Private route protection 
 * Spinner 
 * FAQ , Blogs , Contact us etc 
-* fAST Loading 
+* FAST Loading 
 
 
 # Getting Started with Create React App
