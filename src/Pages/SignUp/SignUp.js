@@ -1,6 +1,6 @@
 import React, { useState, useContext } from 'react';
 import { toast } from 'react-hot-toast';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../context/AuthContextProvider';
 import pageTitle from '../../utility/pageTitle';
 import passwordValidator from '../../utility/passwordValidator';
@@ -12,9 +12,14 @@ const SignUp = () => {
     const { createUser, updateUser } = useContext(AuthContext);
     // error state
     const [error, setError] = useState(null);
-
+    const navigate = useNavigate();
+    // custom loading
+    const [loading, setLoading] = useState(false)
+    const [existerror, setExistsError] = useState("")
     // sign up form event handler
     const handleSubmit = (e) => {
+        setLoading(true);
+        setExistsError("")
         e.preventDefault();
         const form = e.target;
         const name = form.name.value;
@@ -32,7 +37,15 @@ const SignUp = () => {
                 updateUser(profile);
                 toast.success("Your account created successfully !");
                 form.reset();
-            }).catch(error => setError(error.message))
+                setLoading(false);
+                navigate("/myreviews")
+                window.location.reload();
+            }).catch(error => {
+                if (error.message.includes("auth/email-already-in-use")) {
+                    setExistsError("User already exist")
+                }
+                setLoading(false);
+            })
 
     }
     // password input validation handler
@@ -73,11 +86,15 @@ const SignUp = () => {
                                 </label>
                                 <input onBlur={validatePassword} name='password' type="password" placeholder="Password" className="input input-bordered" required />
                                 <label className="label">
-                                    <p className="label-text-alt text-red-600 text-lg">{error && error} </p>
+                                    <p className="label-text-alt text-red-600 text-lg">{error && error} {existerror && existerror} </p>
                                 </label>
                             </div>
                             <div className="form-control mt-6">
-                                <button type='submit' className="btn btn-primary" disabled={error ? true : false}>Sign Up</button>
+                                <button type='submit' className="btn btn-primary" disabled={error ? true : false}>
+                                    {
+                                        loading ? <button className="btn btn-square loading btn-primary text-white"></button> : "Sign Up"
+                                    }
+                                </button>
                             </div>
                             <p className='text-center text-xl font-semibold mt-4'>Already have an account ? <Link to="/signin" className='text-primary'>Sign In</Link> </p>
                         </div>
