@@ -40,6 +40,7 @@ const SignUp = () => {
                 setLoading(false);
                 navigate("/myreviews")
                 window.location.reload();
+                toast.success("Signup successfully!")
             }).catch(error => {
                 if (error.message.includes("auth/email-already-in-use")) {
                     setExistsError("User already exist")

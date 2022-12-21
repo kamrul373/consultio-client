@@ -3,11 +3,15 @@ import logo from "../../../assets/img/logo.png";
 import { Link } from 'react-router-dom';
 import "./Header.css";
 import { AuthContext } from '../../../context/AuthContextProvider';
+import { toast } from 'react-hot-toast';
 const Header = () => {
   const { user, logout } = useContext(AuthContext);
   const handlLogOut = () => {
     logout()
-      .then(() => localStorage.removeItem("consultio-token"))
+      .then(() => {
+        localStorage.removeItem("consultio-token")
+        toast.success("Logged out successfully")
+      })
       .catch(error => console.log(error));
   }
   return (
@@ -58,7 +62,7 @@ const Header = () => {
             }
           </ul>
         </div>
-        <Link to="/" className="btn btn-ghost normal-case text-xl">
+        <Link to="/" className="btn btn-ghost normal-case text-xl hover:bg-white">
           <img src={logo} alt="consultio" className='logo' />
         </Link>
 

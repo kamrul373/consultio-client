@@ -4,6 +4,7 @@ import { FaGithub, FaGoogle } from 'react-icons/fa';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../context/AuthContextProvider';
 import pageTitle from '../../utility/pageTitle';
+import { toast } from 'react-hot-toast';
 
 
 const SignIn = () => {
@@ -45,6 +46,7 @@ const SignIn = () => {
                     .then(response => response.json())
                     .then(data => {
                         localStorage.setItem("consultio-token", data.token)
+                        toast.success("Logged in successfully")
                     })
                     .catch(error => console.log(error));
 
