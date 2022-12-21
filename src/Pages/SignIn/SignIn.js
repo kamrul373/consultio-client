@@ -18,8 +18,11 @@ const SignIn = () => {
     const from = location.state?.from?.pathname || "/";
     // error state
     const [error, setError] = useState(null)
+    // custom loading
+    const [loading, setLoading] = useState(false)
     // email password login event handler
     const handleLogin = (e) => {
+        setLoading(true)
         e.preventDefault();
         const form = e.target;
         const email = form.email.value;
@@ -46,8 +49,12 @@ const SignIn = () => {
                     .catch(error => console.log(error));
 
                 form.reset();
+                setLoading(false)
                 navigate(from, { replace: true });
-            }).catch(error => setError(error.message))
+            }).catch(error => {
+                setError(error.message)
+                setLoading(false)
+            })
     }
     // google login
     const handlGoogleLogin = () => {
@@ -138,7 +145,11 @@ const SignIn = () => {
                                 </p>
                             </div>
                             <div className="form-control mt-6">
-                                <button type='submit' className="btn btn-primary">Sign in</button>
+                                <button type='submit' className="btn btn-primary">
+                                    {
+                                        loading ? <button className="btn btn-square loading btn-primary text-white"></button> : "Sign In"
+                                    }
+                                </button>
                             </div>
                             <p className='text-center text-xl font-semibold mt-4'>Don't have an account ? <Link to="/signup" className='text-primary'>Sign Up</Link> </p>
                         </div>
