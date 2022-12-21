@@ -1,17 +1,23 @@
 import React from 'react';
-import { Link, useLoaderData } from 'react-router-dom';
+import { Link, useLoaderData, useNavigation } from 'react-router-dom';
 import pageTitle from '../../../utility/pageTitle';
 import Services from '../../Shared/Services/Services';
 import Banner from "../Banner/Banner";
 import Contact from '../Contact/Contact';
 import FAQ from '../FAQ/FAQ';
 import Step from '../Step/Step';
+import Loading from '../../Shared/Loading/Loading';
 
 
 const Home = () => {
     // page title
     pageTitle("Home");
     const services = useLoaderData();
+    const navigation = useNavigation();
+
+    if (navigation.state === "loading") {
+        return <Loading></Loading>
+    }
     return (
         <div>
             <Banner></Banner>
