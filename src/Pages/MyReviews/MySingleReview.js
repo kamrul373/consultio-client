@@ -2,9 +2,11 @@ import React, { useEffect, useState } from 'react';
 import { FaEdit, FaTrashAlt } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 
+
 const MySingleReview = ({ review, id, handleReviewDelete }) => {
     // destructuring single review
     const { serviceId, _id, customerReview, customerRating } = review;
+
 
     // service state
     const [service, setService] = useState();

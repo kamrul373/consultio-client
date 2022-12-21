@@ -3,6 +3,7 @@ import { toast } from 'react-hot-toast';
 import { AuthContext } from '../../context/AuthContextProvider';
 import pageTitle from '../../utility/pageTitle';
 import MySingleReview from './MySingleReview';
+import Loading from '../Shared/Loading/Loading';
 
 const MyReviews = () => {
     // page title
@@ -12,7 +13,7 @@ const MyReviews = () => {
     const [reviews, setReviews] = useState([]);
     const url = user?.email ? `https://consultio-server.vercel.app/userreviews?email=${user?.email}` : `https://consultio-server.vercel.app/userreviews?uid=${user?.uid}`;
 
-
+    const [customLoading, setCustomLoading] = useState(true);
     useEffect(() => {
         fetch(url, {
             headers: {
@@ -20,8 +21,15 @@ const MyReviews = () => {
             }
         })
             .then(response => response.json())
-            .then(data => setReviews(data));
+            .then(data => {
+                setCustomLoading(false)
+                return setReviews(data)
+            });
     }, [url]);
+
+    if (customLoading) {
+        return <Loading></Loading>
+    }
 
     // single review delete event handler 
     const handleReviewDelete = (id) => {
