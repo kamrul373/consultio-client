@@ -35,6 +35,22 @@ const SignUp = () => {
                     photoURL: photo,
                 }
                 updateUser(profile);
+                // requesting for an authorization token
+                const currentUser = {
+                    email: email
+                }
+                fetch("https://consultio-server.vercel.app/jwt", {
+                    method: "POST",
+                    headers: {
+                        "content-type": "application/json"
+                    },
+                    body: JSON.stringify(currentUser)
+                })
+                    .then(response => response.json())
+                    .then(data => {
+                        localStorage.setItem("consultio-token", data.token)
+                    })
+                    .catch(error => console.log(error));
                 toast.success("Your account created successfully !");
                 form.reset();
                 setLoading(false);
