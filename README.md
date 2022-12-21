@@ -3,8 +3,10 @@
 ### Server : https://github.com/kamrul373/consultio-server
 
 ## Features : 
-* I handled Loading state management
-* User authentication - Firebase , .env.local , registration , login , forget password recover implemented.
+* I handled Loading state efficiently
+* Authentication by Email password & social login using Firebase.
+*Add Service & reviews only for logged-in Users using React, Express JS, MongoDB & Context API.
+*JWT token authorization for managing my reviews (Edit, Delete).
 * Social login
 * Token based authentication to visit my reviews 
 * Logged in user can give review , edit , delete review .
