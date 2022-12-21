@@ -36,9 +36,12 @@ const SignUp = () => {
                 }
                 updateUser(profile);
                 // requesting for an authorization token
+                const user = response.user;
                 const currentUser = {
-                    email: email
+                    email: user.email
                 }
+                console.log(response)
+                console.log(currentUser)
                 fetch("https://consultio-server.vercel.app/jwt", {
                     method: "POST",
                     headers: {
@@ -48,6 +51,7 @@ const SignUp = () => {
                 })
                     .then(response => response.json())
                     .then(data => {
+                        console.log(data);
                         localStorage.setItem("consultio-token", data.token)
                     })
                     .catch(error => console.log(error));
