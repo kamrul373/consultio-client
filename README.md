@@ -1,3 +1,21 @@
+# Project Title : Consultio - Immigration & Visa Consultant
+## Live url : https://consultio-f2fd2.web.app/
+### Server : https://github.com/kamrul373/consultio-server
+
+## Features : 
+* I handled Loading state management
+* User authentication - Firebase , .env.local , registration , login , forget password recover implemented.
+* Social login
+* Token based authentication to visit my reviews 
+* Logged in user can give review , edit , delete review .
+* Service adding features , showing each service review desc mode .
+* Private route protection 
+* Spinner 
+* FAQ , Blogs , Contact us etc 
+* FAST Loading 
+
+## Technology used : React JS , Node JS, Express JS , Mongodb, Firebase, JWT, Tailwindcss, daisyui, hot toast, moment js, react icons, react router dom
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
